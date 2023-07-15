@@ -24,14 +24,14 @@ namespace PlatformService.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var m = _flatformRepo.GetAllFlatform();
+            var m = _flatformRepo.GetAllPlatform();
             return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(m));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var m = _flatformRepo.GetFlatformById(id);
+            var m = _flatformRepo.GetPlatformById(id);
             if (m == null)
             {
                 return NotFound();
@@ -44,7 +44,7 @@ namespace PlatformService.Controllers
         {
             var flatFormModel = _mapper.Map<Platform>(model);
 
-            _flatformRepo.CreateFlatform(flatFormModel);
+            _flatformRepo.CreatePlatform(flatFormModel);
             _flatformRepo.SaveChange();
 
             var flatformReadDto = _mapper.Map<PlatformReadDto>(flatFormModel);

@@ -10,20 +10,20 @@ namespace PlatformService.Data
             _dbContext = dbContext;
         }
 
-        public void CreateFlatform(Platform model)
+        public void CreatePlatform(Platform model)
         {
             if (model == null) throw new ArgumentNullException(nameof(model));
-            _dbContext.Flatforms.Add(model);
+            _dbContext.Platforms.Add(model);
         }
 
-        public IEnumerable<Platform> GetAllFlatform()
+        public IEnumerable<Platform> GetAllPlatform()
         {
-            return _dbContext.Flatforms.OrderBy(x => x.Name).ToList();
+            return _dbContext.Platforms.OrderBy(x => x.Name).ToList();
         }
 
-        public Platform GetFlatformById(int id)
+        public Platform GetPlatformById(int id)
         {
-            return _dbContext.Flatforms.FirstOrDefault(x => x.Id == id);
+            return _dbContext.Platforms.FirstOrDefault(x => x.Id == id);
         }
 
         public bool SaveChange()
