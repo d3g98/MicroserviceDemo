@@ -89,3 +89,5 @@ H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\runtimes\win\lib\n
 H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\appsettings.Production.json
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\RabbitMQ.Client.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\System.Threading.Channels.dll
