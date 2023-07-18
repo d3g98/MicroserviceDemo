@@ -1,4 +1,4 @@
-﻿using PlatformService.Data;
+﻿using PlatformService.Dtos;
 
 namespace PlatformService.AsyncDataServices
 {

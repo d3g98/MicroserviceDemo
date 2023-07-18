@@ -15,15 +15,7 @@ namespace PlatformService.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            string nameDb = "PlatformConns";
-            if (_environment.IsProduction())
-            {
-                options.UseSqlServer(_configuration.GetConnectionString(nameDb));
-            }
-            else
-            {
-                options.UseInMemoryDatabase(nameDb);
-            }
+            options.UseSqlServer(_configuration.GetConnectionString("PlatformConns"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

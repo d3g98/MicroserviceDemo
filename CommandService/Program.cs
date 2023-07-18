@@ -1,4 +1,6 @@
+using CommandService.AsyncDataServices;
 using CommandService.Data;
+using CommandService.EventProcessing;
 using PlatformService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<IEventProcessor, EventProccessor>();
+builder.Services.AddHostedService<MessageBusSubcriber>();
 builder.Services.AutoMapper();
 
 builder.Services.AddDbContext<AppDbContext>();
