@@ -16,7 +16,7 @@ namespace PlatformService.Data
             _dbContext.Platforms.Add(model);
         }
 
-        public IEnumerable<Platform> GetAllPlatform()
+        public IEnumerable<Platform> GetAllPlatforms()
         {
             return _dbContext.Platforms.OrderBy(x => x.Name).ToList();
         }

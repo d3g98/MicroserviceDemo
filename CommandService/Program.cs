@@ -1,6 +1,7 @@
 using CommandService.AsyncDataServices;
 using CommandService.Data;
 using CommandService.EventProcessing;
+using CommandService.SyncDataServices.Grpc;
 using PlatformService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,7 @@ builder.Services.AddHostedService<MessageBusSubcriber>();
 builder.Services.AutoMapper();
 
 builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddTransient<IPlatformDataClient, PlatformDataClient>();
 builder.Services.AddTransient<ICommandRepo, CommandRepo>();
 
 var app = builder.Build();
@@ -31,5 +33,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Seed();
 
 app.Run();

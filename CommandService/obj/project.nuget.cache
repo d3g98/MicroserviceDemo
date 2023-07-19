@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dPoKOQ35Ib6wnNmvf858xM/+jUXwdng4YDsjqqUAM0LalgcOwHJsjeBoeqXU/6AttiJ+qwd+6pFg5qVrEWDwOQ==",
+  "dgSpecHash": "596/wDPne9JOLjZzH8ZyxkkNpbpaX84J03whScl1XI4WK6yIrdi5ivXpZUVLND0my4nY/XcSLxiDw8AI/XqbiQ==",
   "success": true,
   "projectFilePath": "H:\\NET.CORE\\MicroserviceDemo\\CommandService\\CommandService.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,11 @@
     "C:\\Users\\DuongNN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\DuongNN\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\DuongNN\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\DuongNN\\.nuget\\packages\\google.protobuf\\3.23.4\\google.protobuf.3.23.4.nupkg.sha512",
+    "C:\\Users\\DuongNN\\.nuget\\packages\\grpc.core.api\\2.55.0\\grpc.core.api.2.55.0.nupkg.sha512",
+    "C:\\Users\\DuongNN\\.nuget\\packages\\grpc.net.client\\2.55.0\\grpc.net.client.2.55.0.nupkg.sha512",
+    "C:\\Users\\DuongNN\\.nuget\\packages\\grpc.net.common\\2.55.0\\grpc.net.common.2.55.0.nupkg.sha512",
+    "C:\\Users\\DuongNN\\.nuget\\packages\\grpc.tools\\2.56.2\\grpc.tools.2.56.2.nupkg.sha512",
     "C:\\Users\\DuongNN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\DuongNN\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\DuongNN\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

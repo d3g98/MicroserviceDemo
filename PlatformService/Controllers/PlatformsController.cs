@@ -28,7 +28,7 @@ namespace PlatformService.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var m = _flatformRepo.GetAllPlatform();
+            var m = _flatformRepo.GetAllPlatforms();
             return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(m));
         }
 

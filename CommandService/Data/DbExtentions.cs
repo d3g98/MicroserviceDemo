@@ -1,19 +1,47 @@
-﻿namespace PlatformService.Data
+﻿using CommandService.Data;
+using CommandService.Models;
+using CommandService.SyncDataServices.Grpc;
+
+namespace PlatformService.Data
 {
     public static class DbExtentions
     {
-        //public static void Seed(this ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Platform>().HasData(
-        //        new Platform() { Id = 1, Name = "Dot Net", Publisher = "Microsoft", Cost = "Free" },
-        //        new Platform() { Id = 2, Name = "SQL Server Express", Publisher = "Microsoft", Cost = "Free" },
-        //        new Platform() { Id = 3, Name = "Kubernetes", Publisher = "Cloud Native Conputing Foundation", Cost = "Free" }
-        //        );
-        //}
-
         public static void AutoMapper(this IServiceCollection services)
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        }
+
+        public static void Seed(this WebApplication app)
+        {
+            using (var serviceScope = app.Services.CreateScope())
+            {
+                var grpcClient = serviceScope.ServiceProvider.GetService<IPlatformDataClient>();
+
+                var platforms = grpcClient.ReturnAllPlatforms();
+
+                InsertData(serviceScope.ServiceProvider.GetService<ICommandRepo>(), platforms);
+            }
+        }
+
+        private static void InsertData(ICommandRepo? commandRepo, IEnumerable<Platform> platforms)
+        {
+            if (platforms != null)
+            {
+                Console.WriteLine("--> Seeding new platforms...");
+
+                foreach (var plat in platforms)
+                {
+                    if (!commandRepo.ExternalPlatformExists(plat.ExternalId))
+                    {
+                        commandRepo.CreatePlatform(plat);
+                    }
+                    commandRepo.SaveChanges();
+                }
+            }
+            else
+            {
+                Console.WriteLine("--> Not exists data.");
+            }
         }
     }
 }

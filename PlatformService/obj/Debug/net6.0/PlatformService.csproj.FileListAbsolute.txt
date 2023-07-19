@@ -91,3 +91,10 @@ H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\runtimes\win\lib\n
 H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\appsettings.Production.json
 H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\RabbitMQ.Client.dll
 H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\System.Threading.Channels.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Google.Protobuf.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Grpc.AspNetCore.Server.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Grpc.AspNetCore.Server.ClientFactory.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Grpc.Core.Api.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Grpc.Net.Client.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Grpc.Net.ClientFactory.dll
+H:\NET.CORE\MicroserviceDemo\PlatformService\bin\Debug\net6.0\Grpc.Net.Common.dll
